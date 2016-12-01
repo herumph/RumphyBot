@@ -166,3 +166,9 @@ for comment in subreddit_comments:
 		already_done.append(comment.id)
 		write_out("already_done",already_done)
 		comment.reply(message)
+
+	#Responding to not nice messages.
+	if(comment.body.lower().count("fuck you rumphybot") and comment.id not in already_done):
+		already_done.append(comment.id)
+		write_out("already_done",already_done)
+		comment.reply("http://imgur.com/08gDI9E")
