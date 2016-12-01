@@ -9,7 +9,7 @@ from config_bot import *
 import random
 
 #Reddit stuff
-r = praw.Reddit("Rumphybot 1.3 by herumph")
+r = praw.Reddit("Rumphybot 1.4 by herumph")
 r.login(REDDIT_USERNAME, REDDIT_PASS)
 subreddit = r.get_subreddit("RumphyBot")
 #subreddit = r.get_subreddit("RunningCirlejerk")
