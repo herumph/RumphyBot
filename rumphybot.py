@@ -162,14 +162,6 @@ for comment in subreddit_comments:
 		write_out("already_done",already_done)
 		comment.reply("You're such a special little snowflake with your [weak shins.](https://youtu.be/hexYeGlgD0c?t=86)")
 
-	#Stalking Shoes.
-	if(str(comment.author) == "YourShoesUntied" and comment.id not in already_done):
-		already_done.append(comment.id)
-		write_out("already_done",already_done)
-		hitler_speech = get_array("hitler_speech")
-		message = random.choice(hitler_speech)
-		comment.reply(message)
-
 	#Responding to not nice messages.
 	if(comment.body.lower().count("fuck you rumphybot") and comment.id not in already_done):
 		already_done.append(comment.id)
