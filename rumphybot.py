@@ -12,8 +12,8 @@ import random
 #Reddit stuff
 r = praw.Reddit("Rumphybot 1.4 by herumph")
 r.login(REDDIT_USERNAME, REDDIT_PASS)
-subreddit = r.get_subreddit("RumphyBot")
-#subreddit = r.get_subreddit("RunningCirlejerk")
+#subreddit = r.get_subreddit("RumphyBot")
+subreddit = r.get_subreddit("RunningCirclejerk")
 subreddit_comments = subreddit.get_comments()
 
 #Functions to read and write files into arrays.
@@ -167,7 +167,8 @@ for comment in subreddit_comments:
 		already_done.append(comment.id)
 		write_out("already_done",already_done)
 		comment.reply("http://imgur.com/08gDI9E")
-
+		
+		
 #Going to edit a post made on a thread for an hour after it's posted
 temp = []
 for i in range(0,len(post)-1,2):
