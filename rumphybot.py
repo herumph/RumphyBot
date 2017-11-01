@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-#Rumphybot 1.5
+#Rumphybot 1.6
 #Bot to save linked threads before they are deleted or removed by a mod.
 
 #functions to read and write files into arrays.
@@ -15,24 +15,6 @@ def write_out(input_string,input_array):
 		for i in input_array:
 			f.write(i+"\n")
 	return
-
-#looking at urls
-def url(link, link_len):
-        #getting rid of last whitespace if it exists.
-        link_len = len(list(filter(None, link_len)))
-        if(link_len < 8):
-            url_tit = "**Title** \n \n"+link.title
-            url_text = "\n \n **Text** \n \n"+link.selftext
-            author_text = "\n \n- "+str(link.author)
-            sim_text = "\n \n +/u/user_Simulator "+str(link.author)
-            new_comment = url_tit+url_text+author_text+sim_text
-            return new_comment
-        else:
-            text = link.comments[0].body
-            author = link.comments[0].author
-            sim_text = "\n \n +/u/user_Simulator "+str(author)
-            new_comment = "**Link comment text** \n \n"+text+"\n \n"+"- "+str(author)+sim_text
-            return new_comment
 
 #responding to thanks messages
 def thanks(author):
